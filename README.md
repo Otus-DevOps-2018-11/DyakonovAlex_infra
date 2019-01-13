@@ -1,7 +1,6 @@
 # DyakonovAlex_infra
 DyakonovAlex Infra repository
 
-# Configuration
 bastion_IP = 35.187.112.233
 someinternalhost_IP = 10.132.0.3
 
