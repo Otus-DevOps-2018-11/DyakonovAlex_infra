@@ -3,6 +3,16 @@ DyakonovAlex Infra repository
 
 ## Homework 5
 <details>
+параметризированы:  
+- ID проекта (обязательно)  
+- source_image_family (обязательно)  
+- machine_type  
+- описание образа  
+- размер и тип диска  
+- название сети  
+- тег сети  
+
+Создан базовый образ семейства reddit-base
 </details>
 
 ## Homework 4
