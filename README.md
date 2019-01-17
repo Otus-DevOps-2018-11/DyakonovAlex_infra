@@ -2,7 +2,6 @@
 DyakonovAlex Infra repository
 
 ## Homework 5
-<details>
 параметризированы:  
 - ID проекта (обязательно)  
 - source_image_family (обязательно)  
@@ -13,7 +12,6 @@ DyakonovAlex Infra repository
 - тег сети  
 
 Создан базовый образ семейства reddit-base
-</details>
 
 ## Homework 4
 <details>
