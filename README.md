@@ -1,22 +1,29 @@
 # DyakonovAlex_infra
 DyakonovAlex Infra repository
 
-# Homework ¹4
+## Homework 5
+<details>
+</details>
+
+## Homework 4
+<details>
 testapp_IP = 35.187.112.233
 testapp_port = 9292
+</details>
 
-
-# Homework ¹3
+## Homework 3
+<details>
 bastion_IP = 35.187.112.233
 someinternalhost_IP = 10.132.0.3
 
-# One line connection to someinternalhost
+### One line connection to someinternalhost
 ssh -o ProxyCommand='ssh -i ~/.ssh/appuser -W %h:%p appuser@35.187.112.233' appuser@10.132.0.3
 
-# Connection to someinternalhost by alias
-1. create file ~/.ssh/config
+### Connection to someinternalhost by alias
 
-2. add to ~/.ssh/config:
+create file ~/.ssh/config
+
+add to ~/.ssh/config:
 
 HOST bastion
   user appuser
@@ -29,4 +36,4 @@ HOST someinternalhost
   IdentityFile ~/.ssh/appuser
   hostname 10.132.0.3
   ProxyCommand ssh bastion -W %h:%p
-
+</details>
