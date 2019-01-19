@@ -36,7 +36,7 @@ resource "google_compute_instance" "app" {
     type        = "ssh"
     user        = "appuser"
     agent       = false
-    private_key = "appuser:${file(var.private_key_path)}"
+    private_key = "${file(var.private_key_path)}"
   }
 
   provisioner "file" {
@@ -45,8 +45,19 @@ resource "google_compute_instance" "app" {
   }
 
   provisioner "remote-exec" {
-    script = "files/deploy.sh"
+    inline = [
+      "git clone -b monolith https://github.com/express42/reddit.git",
+      "cd reddit",
+      "bundle install",
+      "sudo mv /tmp/puma.service /etc/systemd/system/puma.service",
+      "sudo systemctl start puma",
+      "sudo systemctl enable puma",
+    ]
   }
+
+  # provisioner "remote-exec" {
+  #   script = "files/deploy.sh"
+  # }
 }
 
 resource "google_compute_firewall" "firewall_puma" {
