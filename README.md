@@ -1,6 +1,25 @@
 # DyakonovAlex_infra
 DyakonovAlex Infra repository
 
+## Homework 8
+
+- Установлен ansible
+- Добавлен inventory 
+- Добавлен ansible.cfg
+- Добавлен inventory.yml
+- Убедился что ansible может управлять группой хостов
+- Проверил выполнение команд
+- Добавлен простой плейбук clone.yml
+
+При первом запуске 
+ansible-playbook clone.yml 
+репозиторий уже был клонирован в директорию ~/reddit и изменений не произошло. changed=0
+
+После выполнения команды 
+ansible app -m command -a 'rm -rf ~/reddit' 
+удалилась директория 
+При втором запуске ansible-playbook clone.yml репозиторий клонировался. changed=1
+
 ## Homework 7  
 
 - Добавлено правило файрволла для ssh  
