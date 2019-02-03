@@ -31,6 +31,7 @@ resource "google_compute_instance" "db" {
     private_key = "${file(var.private_key_path)}"
   }
 
+  /*
   provisioner "file" {
     source      = "../modules/db/files/deploy.sh"
     destination = "/tmp/deploy.sh"
@@ -42,6 +43,7 @@ resource "google_compute_instance" "db" {
       "sudo /tmp/deploy.sh ${self.network_interface.0.address}",
     ]
   }
+  */
 }
 
 # Правило firewall

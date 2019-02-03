@@ -33,6 +33,7 @@ resource "google_compute_instance" "app" {
     private_key = "${file(var.private_key_path)}"
   }
 
+  /*
   provisioner "file" {
     source      = "../modules/app/files/puma.service"
     destination = "/tmp/puma.service"
@@ -49,6 +50,7 @@ resource "google_compute_instance" "app" {
       "/tmp/deploy.sh ${join("\n", var.db_local_ip)}",
     ]
   }
+  */
 }
 
 resource "google_compute_address" "app_ip" {
